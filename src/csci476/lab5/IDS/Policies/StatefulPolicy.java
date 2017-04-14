@@ -8,6 +8,10 @@ import org.jnetpcap.packet.PcapPacket;
  */
 public class StatefulPolicy extends Policy {
 
+    public StatefulPolicy() {
+        isStateful = true;
+    }
+
     public boolean packetMatchesPolicy(PcapPacket packet) {
         return false;
     }

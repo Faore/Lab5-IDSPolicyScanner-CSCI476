@@ -9,9 +9,13 @@ public class IDS {
 
     private Pcap pcap;
     private Policy policy;
+    private CaptureData captureData;
 
     public IDS(Policy policy, Pcap pcap) {
 
     }
 
+    public void begin() {
+
+    }
 }
