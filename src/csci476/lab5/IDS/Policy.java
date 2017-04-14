@@ -18,8 +18,8 @@ public abstract class Policy {
     public int host_port = -1; //-1 = Any
     public int attacker_port = -1; //-1 Any;
     //Addresses
-    public String attacker_address = "Any";
-    public String host_address = null; //If this is missing, the rule cannot continue
+    public String attacker_address = null;
+    public String host_address = null;
     //Packet Content Filters: Regex Expressions
     public ArrayList<Pattern> from_host = new ArrayList<Pattern>();
     public ArrayList<Pattern> to_host = new ArrayList<Pattern>();
@@ -76,6 +76,8 @@ public abstract class Policy {
                 String rawPort = line.substring(10).trim();
                 if(!rawPort.equals("any")) {
                     policy.host_port = Integer.parseInt(rawPort);
+                } else {
+                    policy.host_port = -1;
                 }
                 hostPortPresent = true;
                 System.out.println("Host Port: " + policy.host_port);
@@ -86,6 +88,8 @@ public abstract class Policy {
                 String rawPort = line.substring(14).trim();
                 if(!rawPort.equals("any")) {
                     policy.attacker_port = Integer.parseInt(rawPort);
+                } else {
+                    policy.attacker_port = -1;
                 }
                 attackerPortPresent = true;
                 System.out.println("Attacker Port: " + policy.attacker_port);
@@ -95,7 +99,7 @@ public abstract class Policy {
             if(line.startsWith("attacker=")) {
                 String ip = line.substring(9).trim();
                 attackerPresent = true;
-                policy.host_address = ip;
+                policy.attacker_address = ip;
                 System.out.println("Attacker IP address: " + ip);
                 continue;
             }
