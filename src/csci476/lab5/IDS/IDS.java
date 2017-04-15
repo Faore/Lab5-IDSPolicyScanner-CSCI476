@@ -30,5 +30,7 @@ public class IDS {
         } finally {
             pcap.close();
         }
+        System.out.println("\n---------------------------------------------\n\n" +
+                "Complete: Parsed " + packetHandler.parsedPacketCount + " packets.");
     }
 }

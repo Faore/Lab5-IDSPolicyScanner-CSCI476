@@ -49,10 +49,9 @@ public class PacketHandler implements PcapPacketHandler<String> {
             packet.getHeader(tcp);
             packet.getHeader(ip4);
 
-
             System.out.println("IDS:Stateless: Matched TCP Packet " + parsedPacketCount + ": ");
-            System.out.println("\tFrom: " + FormatUtils.ip(ip4.source()));
-            System.out.println("\tTo: " + FormatUtils.ip(ip4.destination()));
+            System.out.println("\tFrom: " + FormatUtils.ip(ip4.source()) + ":" + tcp.source());
+            System.out.println("\tTo: " + FormatUtils.ip(ip4.destination()) + ":" + tcp.destination());
         }
     }
 
@@ -62,6 +61,18 @@ public class PacketHandler implements PcapPacketHandler<String> {
     }
 
     private void parseUdpPacket(PcapPacket packet) {
+        parsedPacketCount++;
+        if(policy.packetMatchesPolicy(packet)) {
+            Udp udp = new Udp();
+            Ip4 ip4 = new Ip4();
+            Payload payload = new Payload();
 
+            packet.getHeader(udp);
+            packet.getHeader(ip4);
+
+            System.out.println("IDS:Stateless: Matched UDP Packet " + parsedPacketCount + ": ");
+            System.out.println("\tFrom: " + FormatUtils.ip(ip4.source()) + ":" + udp.source());
+            System.out.println("\tTo: " + FormatUtils.ip(ip4.destination()) + ":" + udp.destination());
+        }
     }
 }

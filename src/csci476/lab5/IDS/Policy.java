@@ -177,4 +177,8 @@ public abstract class Policy {
     protected boolean packetIsFromHost(Ip4 ip4) {
         return FormatUtils.ip(ip4.source()).equals(this.host_address);
     }
+
+    protected boolean packetMatchesAttacker(byte[] ip) {
+        return (this.attacker_address.equals("any") || FormatUtils.ip(ip).equals(this.attacker_address));
+    }
 }
