@@ -3,9 +3,13 @@ package csci476.lab5.IDS;
 import csci476.lab5.IDS.Policies.Protocol;
 import csci476.lab5.IDS.Policies.StatefulPolicy;
 import csci476.lab5.IDS.Policies.StatelessPolicy;
+import org.jnetpcap.packet.Payload;
 import org.jnetpcap.packet.PcapPacket;
+import org.jnetpcap.packet.format.FormatUtils;
+import org.jnetpcap.protocol.network.Ip4;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.lang.*;
 
@@ -148,5 +152,29 @@ public abstract class Policy {
             throw new Exception("Policy type not included.");
         }
         return policy;
+    }
+
+    protected static boolean payloadMatch(Payload payload, ArrayList<Pattern> policies) {
+        try {
+            String data = new String(payload.data(), "UTF-8");
+            for ( Pattern pattern : policies ) {
+                Matcher matcher = pattern.matcher(data);
+                if(matcher.find()) {
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("Failed to parse packet payload.");
+            return false;
+        }
+        return false;
+    }
+
+    protected boolean packetIsToHost(Ip4 ip4) {
+        return FormatUtils.ip(ip4.destination()).equals(this.host_address);
+    }
+
+    protected boolean packetIsFromHost(Ip4 ip4) {
+        return FormatUtils.ip(ip4.source()).equals(this.host_address);
     }
 }

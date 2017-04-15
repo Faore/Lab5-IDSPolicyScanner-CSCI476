@@ -46,5 +46,6 @@ public class Main {
         }
         //We're good to go! Lets "boot" the IDS!
         IDS ids = new IDS(policy, pcap);
+        ids.begin();
     }
 }
