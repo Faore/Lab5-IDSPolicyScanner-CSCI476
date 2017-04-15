@@ -14,6 +14,7 @@ import org.jnetpcap.protocol.tcpip.Udp;
 public class PacketHandler implements PcapPacketHandler<String> {
 
     public int parsedPacketCount = 0;
+    public int sessionCount = 0;
     private CaptureData captureData;
     private Policy policy;
 
@@ -35,7 +36,10 @@ public class PacketHandler implements PcapPacketHandler<String> {
 
             }
         } else if(packet.hasHeader(Udp.ID)) {
-            parseUdpPacket(packet);
+            //Ignore UDP packets in a stateful IDS.
+            if(!policy.isStateful) {
+                parseUdpPacket(packet);
+            }
         }
     }
     //Check if packet matches
@@ -57,7 +61,20 @@ public class PacketHandler implements PcapPacketHandler<String> {
 
     //This method will track sessions in CaptureData
     private void parseTcpPacketWithSession(PcapPacket packet) {
+        //Bundle TCP packets together starting with the beginning of the connection, ending with the closing of the connection.
+        boolean addedToSession = false;
+        for ( TCPSession session : captureData.sessions) {
+            if(session.addPacketToSession(packet)) {
+                addedToSession = true;
+                break;
+            }
+        }
 
+        if(!addedToSession) {
+            captureData.sessions.add(new TCPSession(packet, sessionCount + 1));
+        }
+        sessionCount++;
+        parsedPacketCount++;
     }
 
     private void parseUdpPacket(PcapPacket packet) {

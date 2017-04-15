@@ -122,22 +122,4 @@ public class StatelessPolicy extends Policy {
         }
         return false;
     }
-
-    private boolean hostPortMatches(int port) {
-        if(this.host_port == -1 || this.host_port == port) {
-            //Different Ports. No match.
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private boolean attackerPortMatches(int port) {
-        if(this.attacker_port == -1 || this.attacker_port == port) {
-            //Different Ports. No match.
-            return true;
-        } else {
-            return false;
-        }
-    }
 }

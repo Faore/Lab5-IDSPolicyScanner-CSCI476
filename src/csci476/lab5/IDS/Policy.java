@@ -1,17 +1,17 @@
 package csci476.lab5.IDS;
 
-import csci476.lab5.IDS.Policies.Protocol;
-import csci476.lab5.IDS.Policies.StatefulPolicy;
-import csci476.lab5.IDS.Policies.StatelessPolicy;
-import org.jnetpcap.packet.Payload;
-import org.jnetpcap.packet.PcapPacket;
-import org.jnetpcap.packet.format.FormatUtils;
-import org.jnetpcap.protocol.network.Ip4;
+        import csci476.lab5.IDS.Policies.Protocol;
+        import csci476.lab5.IDS.Policies.StatefulPolicy;
+        import csci476.lab5.IDS.Policies.StatelessPolicy;
+        import org.jnetpcap.packet.Payload;
+        import org.jnetpcap.packet.PcapPacket;
+        import org.jnetpcap.packet.format.FormatUtils;
+        import org.jnetpcap.protocol.network.Ip4;
 
-import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.lang.*;
+        import java.util.ArrayList;
+        import java.util.regex.Matcher;
+        import java.util.regex.Pattern;
+        import java.lang.*;
 
 /**
  * Created by cetho on 4/14/2017.
@@ -127,7 +127,7 @@ public abstract class Policy {
             }
         }
 
-        if(!(hostPresent && protocolPresent && hostPortPresent && attackerPortPresent && subpolicyPresent && attackerPresent)) {
+        if(!(hostPresent && ((protocolPresent && !policy.isStateful) || (!protocolPresent && policy.isStateful)) && hostPortPresent && attackerPortPresent && subpolicyPresent && attackerPresent)) {
             throw new Exception("Not all required configurations are in the policy file.");
         }
 
@@ -180,5 +180,23 @@ public abstract class Policy {
 
     protected boolean packetMatchesAttacker(byte[] ip) {
         return (this.attacker_address.equals("any") || FormatUtils.ip(ip).equals(this.attacker_address));
+    }
+
+    protected boolean hostPortMatches(int port) {
+        if(this.host_port == -1 || this.host_port == port) {
+            //Different Ports. No match.
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    protected boolean attackerPortMatches(int port) {
+        if(this.attacker_port == -1 || this.attacker_port == port) {
+            //Different Ports. No match.
+            return true;
+        } else {
+            return false;
+        }
     }
 }
