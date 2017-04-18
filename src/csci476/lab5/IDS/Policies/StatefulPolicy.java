@@ -1,6 +1,7 @@
 package csci476.lab5.IDS.Policies;
 
 import csci476.lab5.IDS.Policy;
+import csci476.lab5.IDS.TCPSession;
 import org.jnetpcap.packet.Payload;
 import org.jnetpcap.packet.PcapPacket;
 import org.jnetpcap.protocol.network.Ip4;
@@ -17,6 +18,7 @@ public class StatefulPolicy extends Policy {
     }
 
     public boolean packetMatchesPolicy(PcapPacket packet) {
+        //Don't use.
         Ip4 ip4 = new Ip4();
         Tcp tcp = new Tcp();
         Payload payload = new Payload();
@@ -66,5 +68,75 @@ public class StatefulPolicy extends Policy {
             }
         }
         return false;
+    }
+
+    public boolean sessionMatchesPolicy(TCPSession session) {
+        int hostPeer = 0;
+        // Associate host to peer.
+        if(session.peer1Addr.equals(this.host_address)) {
+            hostPeer = 1;
+        } else if(session.peer2Addr.equals(this.host_address)) {
+            hostPeer = 2;
+        }
+        //The host isn't involved in this session, it can't match.
+        if(hostPeer == 0) {
+            return false;
+        }
+        //Lets make sure that the attacker matches
+        if(hostPeer == 1) {
+            if(!(this.attacker_address.equals("any") || this.attacker_address.equals(session.peer2Addr))) {
+                return false;
+            }
+        }
+        if(hostPeer == 2) {
+            if(!(this.attacker_address.equals("any") || this.attacker_address.equals(session.peer1Addr))) {
+                return false;
+            }
+        }
+        //Lets check the host ports, if they don't match, return false.
+        if(hostPeer == 1) {
+            if(!hostPortMatches(session.peer1Port)) {
+                return false;
+            }
+        }
+        if(hostPeer == 2) {
+            if(!hostPortMatches(session.peer2Port)) {
+                return false;
+            }
+        }
+        //Lets check the attacker ports. Same story.
+        if(hostPeer == 2) {
+            if(!attackerPortMatches(session.peer1Port)) {
+                return false;
+            }
+        }
+        if(hostPeer == 1) {
+            if(!attackerPortMatches(session.peer2Port)) {
+                return false;
+            }
+        }
+        //Apply policy checks on payload contents
+        boolean toMatch = false;
+        boolean fromMatch = false;
+        if(hostPeer == 1) {
+            try {
+                toMatch = contentMatch(session.fullPayloadToPeer1(), this.to_host);
+                fromMatch = contentMatch(session.fullPayloadToPeer2(), this.from_host);
+            } catch (Exception e) {
+                System.err.println("Failed to parse TCP session");
+                return false;
+            }
+        }
+        if(hostPeer == 2) {
+            try {
+                toMatch = contentMatch(session.fullPayloadToPeer2(), this.to_host);
+                fromMatch = contentMatch(session.fullPayloadToPeer1(), this.from_host);
+            } catch (Exception e) {
+                System.err.println("Failed to parse TCP session");
+                return false;
+            }
+        }
+        //Evaluate matches
+        return toMatch || fromMatch;
     }
 }

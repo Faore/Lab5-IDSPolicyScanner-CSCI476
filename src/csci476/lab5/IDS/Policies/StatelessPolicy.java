@@ -82,10 +82,12 @@ public class StatelessPolicy extends Policy {
             if(!packetMatchesAttacker(ip4.source())) {
                 return false;
             }
-            //Check if the payload matches a to-host rule.
-            if(packet.hasHeader(Payload.ID)) {
-                packet.getHeader(payload);
-                return payloadMatch(payload, this.to_host);
+            //JnetPcap has a limitation making it hard/impossible to read TCP options.
+            //Match entire packet contents instead of payload/TCP options.
+            try {
+                return contentMatch(new String(packet.getByteArray(0, packet.size()), "UTF-8"), this.to_host);
+            } catch(Exception e) {
+                System.out.println("Failed to convert raw packet to UTF-8.");
             }
         } else if (packetIsFromHost(ip4)) {
             if(isTcp) {
@@ -115,9 +117,12 @@ public class StatelessPolicy extends Policy {
             if(!packetMatchesAttacker(ip4.destination())) {
                 return false;
             }
-            if(packet.hasHeader(Payload.ID)) {
-                packet.getHeader(payload);
-                return payloadMatch(payload, this.from_host);
+            //JnetPcap has a limitation making it hard/impossible to read TCP options.
+            //Match entire packet contents instead of payload/TCP options.
+            try {
+                return contentMatch(new String(packet.getByteArray(0, packet.size()), "UTF-8"), this.from_host);
+            } catch(Exception e) {
+                System.out.println("Failed to convert raw packet to UTF-8.");
             }
         }
         return false;

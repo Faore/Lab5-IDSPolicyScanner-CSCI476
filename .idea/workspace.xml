@@ -9,12 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ec34b1a1-c139-4145-ad5e-8f2334c7c014" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/csci476/lab5/IDS/CaptureData.java" afterPath="$PROJECT_DIR$/src/csci476/lab5/IDS/CaptureData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/csci476/lab5/IDS/IDS.java" afterPath="$PROJECT_DIR$/src/csci476/lab5/IDS/IDS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/csci476/lab5/IDS/PacketHandler.java" afterPath="$PROJECT_DIR$/src/csci476/lab5/IDS/PacketHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatefulPolicy.java" afterPath="$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatefulPolicy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatelessPolicy.java" afterPath="$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatelessPolicy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/csci476/lab5/IDS/Policy.java" afterPath="$PROJECT_DIR$/src/csci476/lab5/IDS/Policy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/csci476/lab5/IDS/TCPSession.java" afterPath="$PROJECT_DIR$/src/csci476/lab5/IDS/TCPSession.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,6 +23,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Lab5$Main__Blame_1__Trace_1_.coverage" NAME="Main (Blame 1, Trace 1) Coverage Results" MODIFIED="1492542497500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>csci476.lab5.*</FILTER>
+    </SUITE>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
@@ -39,12 +44,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="425">
+                <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -52,26 +60,20 @@
       <file leaf-file-name="Policy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="129" column="111" lean-forward="false" selection-start-line="129" selection-start-column="111" selection-end-line="129" selection-end-column="111" />
+            <state relative-caret-position="2754">
+              <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#909#918#0" expanded="true" />
-                <element signature="e#975#984#0" expanded="true" />
-                <element signature="e#6659#6660#0" expanded="true" />
-                <element signature="e#6741#6742#0" expanded="true" />
-                <element signature="e#6792#6793#0" expanded="true" />
-                <element signature="e#6869#6870#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Class.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Class.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Class.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="1248" column="35" lean-forward="true" selection-start-line="1248" selection-start-column="35" selection-end-line="1248" selection-end-column="35" />
+            <state relative-caret-position="19941">
+              <caret line="1248" column="35" lean-forward="false" selection-start-line="1248" selection-start-column="35" selection-end-line="1248" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -80,12 +82,9 @@
       <file leaf-file-name="StatefulPolicy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatefulPolicy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-              <folding>
-                <element signature="e#382#383#0" expanded="true" />
-                <element signature="e#415#416#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1938">
+              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,8 +92,8 @@
       <file leaf-file-name="StatelessPolicy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatelessPolicy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="110" column="26" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="123" selection-end-column="5" />
+            <state relative-caret-position="2040">
+              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,8 +104,8 @@
       <file leaf-file-name="IDS.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/IDS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+            <state relative-caret-position="663">
+              <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,8 +116,20 @@
       <file leaf-file-name="PacketHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/PacketHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="57" selection-end-column="103" />
+            <state relative-caret-position="901">
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TCPSession.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/TCPSession.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="710">
+              <caret line="97" column="33" lean-forward="false" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,21 +140,8 @@
       <file leaf-file-name="CaptureData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/CaptureData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="136">
               <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#222#234#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TCPSession.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/TCPSession.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="43" column="29" lean-forward="true" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -177,19 +175,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/lib/jnetpcap.jar!/org/jnetpcap/packet/PcapPacketHandler.class" />
         <option value="$PROJECT_DIR$/src/csci476/lab5/IDS/HandlerSettings.java" />
         <option value="$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/Protocol.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/csci476/lab5/Main.java" />
-        <option value="$PROJECT_DIR$/src/csci476/lab5/IDS/TCPSession.java" />
         <option value="$PROJECT_DIR$/src/csci476/lab5/IDS/CaptureData.java" />
         <option value="$PROJECT_DIR$/src/csci476/lab5/IDS/PacketHandler.java" />
+        <option value="$PROJECT_DIR$/src/csci476/lab5/IDS/Policy.java" />
+        <option value="$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatefulPolicy.java" />
         <option value="$PROJECT_DIR$/src/csci476/lab5/IDS/IDS.java" />
         <option value="$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatelessPolicy.java" />
-        <option value="$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatefulPolicy.java" />
-        <option value="$PROJECT_DIR$/src/csci476/lab5/IDS/Policy.java" />
+        <option value="$PROJECT_DIR$/src/csci476/lab5/IDS/TCPSession.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -217,6 +215,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,10 +295,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lab5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lab5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -325,7 +337,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (Blame 2, Trace 3)">
+  <component name="RunManager" selected="Application.Main (Simulated Attacker, Trace 5)">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -736,6 +748,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -746,7 +759,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -765,6 +778,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -773,7 +787,27 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatefulPolicy.java</url>
+          <line>122</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatelessPolicy.java</url>
+          <line>122</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatelessPolicy.java</url>
+          <line>87</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -806,16 +840,104 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policy.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2006">
+          <caret line="129" column="111" lean-forward="false" selection-start-line="129" selection-start-column="111" selection-end-line="129" selection-end-column="111" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatefulPolicy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatelessPolicy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="110" column="26" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="123" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/IDS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/PacketHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="57" selection-end-column="103" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/CaptureData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/TCPSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="43" column="29" lean-forward="true" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21216">
+          <caret line="1248" column="35" lean-forward="true" selection-start-line="1248" selection-start-column="35" selection-end-line="1248" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policy.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2822">
           <caret line="181" column="105" lean-forward="true" selection-start-line="181" selection-start-column="105" selection-end-line="181" selection-end-column="105" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#909#918#0" expanded="true" />
-            <element signature="e#975#984#0" expanded="true" />
-            <element signature="e#6659#6660#0" expanded="true" />
-            <element signature="e#6741#6742#0" expanded="true" />
-            <element signature="e#6792#6793#0" expanded="true" />
-            <element signature="e#6869#6870#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -824,10 +946,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -857,7 +976,6 @@
           <caret line="10" column="76" lean-forward="false" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#222#234#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -896,12 +1014,6 @@
           <caret line="156" column="21" lean-forward="false" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#909#918#0" expanded="true" />
-            <element signature="e#975#984#0" expanded="true" />
-            <element signature="e#6659#6660#0" expanded="true" />
-            <element signature="e#6741#6742#0" expanded="true" />
-            <element signature="e#6792#6793#0" expanded="true" />
-            <element signature="e#6869#6870#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -910,10 +1022,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -943,7 +1052,6 @@
           <caret line="10" column="76" lean-forward="false" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#222#234#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -984,12 +1092,6 @@
           <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#909#918#0" expanded="true" />
-            <element signature="e#975#984#0" expanded="true" />
-            <element signature="e#6659#6660#0" expanded="true" />
-            <element signature="e#6741#6742#0" expanded="true" />
-            <element signature="e#6792#6793#0" expanded="true" />
-            <element signature="e#6869#6870#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -998,10 +1100,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1041,12 +1140,6 @@
           <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#909#918#0" expanded="true" />
-            <element signature="e#975#984#0" expanded="true" />
-            <element signature="e#6659#6660#0" expanded="true" />
-            <element signature="e#6741#6742#0" expanded="true" />
-            <element signature="e#6792#6793#0" expanded="true" />
-            <element signature="e#6869#6870#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1055,10 +1148,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1073,14 +1163,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/StatefulPolicy.java" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/HandlerSettings.java" />
     <entry file="jar://$PROJECT_DIR$/lib/jnetpcap.jar!/org/jnetpcap/packet/PcapPacketHandler.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -1114,51 +1196,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19941">
+          <caret line="1248" column="35" lean-forward="false" selection-start-line="1248" selection-start-column="35" selection-end-line="1248" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/CaptureData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="136">
           <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#222#234#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/PacketHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="57" selection-end-column="103" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/IDS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="43" column="30" lean-forward="false" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/TCPSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="43" column="29" lean-forward="true" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatelessPolicy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="110" column="26" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="123" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1167,35 +1216,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatefulPolicy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        <state relative-caret-position="1938">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/IDS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
           <folding>
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/PacketHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policies/StatelessPolicy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/Policy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="129" column="111" lean-forward="false" selection-start-line="129" selection-start-column="111" selection-end-line="129" selection-end-column="111" />
+        <state relative-caret-position="2754">
+          <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#909#918#0" expanded="true" />
-            <element signature="e#975#984#0" expanded="true" />
-            <element signature="e#6659#6660#0" expanded="true" />
-            <element signature="e#6741#6742#0" expanded="true" />
-            <element signature="e#6792#6793#0" expanded="true" />
-            <element signature="e#6869#6870#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Class.java">
+    <entry file="file://$PROJECT_DIR$/src/csci476/lab5/IDS/TCPSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="1248" column="35" lean-forward="true" selection-start-line="1248" selection-start-column="35" selection-end-line="1248" selection-end-column="35" />
+        <state relative-caret-position="710">
+          <caret line="97" column="33" lean-forward="false" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="425">
+            <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
           <folding />
         </state>
       </provider>

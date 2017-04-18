@@ -157,15 +157,19 @@ public abstract class Policy {
     protected static boolean payloadMatch(Payload payload, ArrayList<Pattern> policies) {
         try {
             String data = new String(payload.data(), "UTF-8");
-            for ( Pattern pattern : policies ) {
-                Matcher matcher = pattern.matcher(data);
-                if(matcher.find()) {
-                    return true;
-                }
-            }
+            return contentMatch(data, policies);
         } catch (Exception e) {
             System.err.println("Failed to parse packet payload.");
             return false;
+        }
+    }
+
+    protected static boolean contentMatch(String content, ArrayList<Pattern> policies) {
+        for ( Pattern pattern : policies ) {
+            Matcher matcher = pattern.matcher(content);
+            if(matcher.find()) {
+                return true;
+            }
         }
         return false;
     }

@@ -1,5 +1,6 @@
 package csci476.lab5.IDS;
 
+import csci476.lab5.IDS.Policies.StatefulPolicy;
 import org.jnetpcap.Pcap;
 import org.jnetpcap.packet.PcapPacket;
 import org.jnetpcap.packet.format.FormatUtils;
@@ -35,14 +36,10 @@ public class IDS {
         //Attempt to match TCP sessions.
         if(policy.isStateful) {
             for ( TCPSession session : captureData.sessions ) {
-                for(PcapPacket packet : session.packets) {
-                    if(policy.packetMatchesPolicy(packet)) {
-                        //Matched packet = matched session.
-                        System.out.println("IDS:Stateful: Matched TCP Session " + session.sessionId + ":");
-                        System.out.println("\tPeer 1: " + session.peer1Addr + ":" + session.peer1Port);
-                        System.out.println("\tPeer 2: " + session.peer2Addr + ":" + session.peer2Port);
-                        break;
-                    }
+                if(((StatefulPolicy) policy).sessionMatchesPolicy(session) ) {
+                    System.out.println("IDS:Stateful: Matched TCP Session " + session.sessionId + ":");
+                    System.out.println("\tPeer 1: " + session.peer1Addr + ":" + session.peer1Port);
+                    System.out.println("\tPeer 2: " + session.peer2Addr + ":" + session.peer2Port);
                 }
             }
         }
