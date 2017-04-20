@@ -1,7 +1,6 @@
 host=192.168.0.1
 name=Plaintext POP
-type=stateless
-proto=tcp
+type=stateful
 host_port=110
 attacker_port=any
 attacker=any

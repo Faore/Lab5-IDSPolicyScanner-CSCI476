@@ -72,15 +72,15 @@ public class TCPSession {
         if(peer1Addr.equals(FormatUtils.ip(ip4.source())) && tcp.source() == peer1Port) {
             peer1match = true;
         }
-        if(peer1Addr.equals(FormatUtils.ip(ip4.destination())) && tcp.source() == peer1Port) {
+        if(peer1Addr.equals(FormatUtils.ip(ip4.destination())) && tcp.destination() == peer1Port) {
             peer1match = true;
         }
         //Look For Peer 2
         if(peer2Addr.equals(FormatUtils.ip(ip4.source())) && tcp.source() == peer2Port) {
-            peer1match = true;
+            peer2match = true;
         }
-        if(peer2Addr.equals(FormatUtils.ip(ip4.destination())) && tcp.source() == peer2Port) {
-            peer1match = true;
+        if(peer2Addr.equals(FormatUtils.ip(ip4.destination())) && tcp.destination() == peer2Port) {
+            peer2match = true;
         }
         return peer1match && peer2match;
     }

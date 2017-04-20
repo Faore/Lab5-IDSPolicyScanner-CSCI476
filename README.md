@@ -3,6 +3,9 @@ This IDS implementation takes 2 arguments in the following order:
  - Path to a policy file
  - Path to a Pcap capture file
 
+## Dependencies
+Built using jNetPcap 1.3.0 (Production/Stable) on JDK 1.8.
+
 ## How Packets and Sessions Are Matched
 ### Stateless
 In a stateless policy each packet is matched individually.
